@@ -6,8 +6,31 @@ Tests provide useful information about the health of our code when it starts to 
 - **unittest**: built-in library that tests our program and check if we're getting desired outputs.
 
 
-## Pylint
+## pylint
 
 We'll use an example script called **simple1.py** with a slight error of typing. We can check how *pylint* work afterwards. Actual output of running ```pylint simple1.py``` is:
 
-```E:  4, 6: Undefined variable 'B' (undefined-variable)```
+```
+E:  4, 6: Undefined variable 'B' (undefined-variable)
+```
+
+## unittest
+
+In order to use unittest we create a script called **test_cap.py** where we create a class that inherits from *unittest.TestCase*.
+
+Then we need to create a set of methods called **test methods** that will simply execute the functions or features we want to test.
+
+Afterwards, the last line of the **test method** has to be something that actually tests the output of the function we are testing. This last line has the following syntax:
+
+```
+self.assertEqual(current_result,expected_result)
+```
+
+Finally to make the test script execute, we need to add at the end the last line:
+
+```
+if __name__ == '__main__'
+    unittest.main()
+```
+
+And now we can test our code as we want!
