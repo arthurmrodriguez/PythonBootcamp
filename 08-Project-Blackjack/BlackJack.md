@@ -16,7 +16,7 @@ The **player** starts with two cards facing up and the **dealer** starts with on
 
   2.2. **Dealer** hits over 21: **player wins** and wins the double of the amount placed as a bet.
 
-The game can go on while **player has chips to bet** or while Ctrl+C is not pressed (exit game). There're also some special rules to be considered for both **player and dealer**
+The game can go on while **player has chips to bet** or while ```Ctrl+C``` is not pressed (exit game). There're also some special rules to be considered for both **player and dealer**
 
 1. *Jack*, *Queen* or *King* cards have a value of 10.
 2. *Aces* can count as either 1 or 11, depending on the hand.
