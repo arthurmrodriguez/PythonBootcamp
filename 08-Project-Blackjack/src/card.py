@@ -24,10 +24,14 @@ class Card():
         elif rank in [str(item) for item in range(2,11)]:
             self.value = int(rank)
 
-    # Dunder method: str
+    # Dunder method str :used for printing
     def __str__(self):
-        
+
         if self.visible:
             return f'{self.rank} of {self.suit}'
         else:
             return 'X'
+
+    # Dunder method eq: used for comparison of cards
+    def __eq__(self, other):
+        return self.suit == other.suit and self.rank == other.rank
