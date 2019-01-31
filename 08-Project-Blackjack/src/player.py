@@ -12,4 +12,4 @@ class Player():
     
     self.name = name
     self.hand = hand.Hand(current_hand)
-    self.chips = 0
+    self.chips = chips
