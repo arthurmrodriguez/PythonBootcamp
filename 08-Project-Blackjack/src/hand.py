@@ -39,6 +39,7 @@ class Hand():
   def remove_cards(self):
     self.cards.clear()
     
+    
   # Dunder method set
   def __str__(self):
     
