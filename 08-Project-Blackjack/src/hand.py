@@ -27,9 +27,13 @@ class Hand():
       self.value += card.value
     
   # Add card to hand
-  def add_cards(self, card):
+  def add_card(self, card):
     self.cards.append(card)
     self.check_hand_value()
+    
+  # Remove cards from hand
+  def remove_cards(self):
+    self.cards.clear()
     
   # Dunder method set
   def __str__(self):
