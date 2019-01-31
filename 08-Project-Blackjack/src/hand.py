@@ -18,9 +18,11 @@ class Hand():
   # Check hand value  
   def check_hand_value(self):
     
+    # 'A' rank counts last if available
     self.value = 0
-    for card in self.cards:
-      
+    aux_cards = sorted(self.cards, key=lambda card: card.rank == 'A')
+    
+    for card in aux_cards: 
       if card.visible:
         if card.rank == 'A' and self.value+card.value > Hand.limit:
           self.value += 1
