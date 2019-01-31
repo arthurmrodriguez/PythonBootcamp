@@ -20,12 +20,14 @@ class Hand():
     
     self.value = 0
     for card in self.cards:
-      if card.rank == 'A' :
-        if self.value+card.value > Hand.limit:
-          card.value = 1
+      
+      if card.visible:
+        if card.rank == 'A' and self.value+card.value > Hand.limit:
+          self.value += 1
+        else:
+          self.value += card.value
+            
           
-      self.value += card.value
-    
   # Add card to hand
   def add_card(self, card):
     self.cards.append(card)
